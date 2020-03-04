@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="showAutomata.jnlp">
+  <information>
+    <title>showAutomata</title>
+    <vendor>ENG ALAA AL_KHEDER</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\json-simple-1.1.jar" size="16046" download="eager" />
+    <jar href="showAutomata.jar" size="24622" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="showAutomata" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="showautomata.ShowAutomata"  name="showAutomata" />
+  <update check="always"/>
+</jnlp>

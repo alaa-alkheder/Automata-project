@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFfFF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="test.FXMLController">
+    <children>
+        <Label layoutX="20.0" layoutY="22.0" prefHeight="64.0" prefWidth="415.0" text="CREAT NEW AUTOMATA" textFill="RED">
+            <font>
+                <Font name="Constantia Bold Italic" size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="163.0" prefHeight="34.0" prefWidth="177.0" text="AUTOMATA NAME">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelAlpha" layoutX="289.0" layoutY="287.0" prefHeight="34.0" prefWidth="64.0" text="">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="330.0" layoutY="234.0" prefHeight="34.0" prefWidth="108.0" text="FINAL STATE">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="234.0" prefHeight="34.0" prefWidth="177.0" text="INITIAL STATE">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="284.0" prefHeight="34.0" prefWidth="196.0" text="TRANSATION FUNCTION ">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="330.0" layoutY="163.0" prefHeight="34.0" prefWidth="177.0" text="ALPHABET">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="AZ" layoutX="335.0" layoutY="207.0" mnemonicParsing="false" onAction="#AZ" text="A..Z" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <toggleGroup>
+                <ToggleGroup fx:id="ALPHABET" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="binary" layoutX="463.0" layoutY="207.0" mnemonicParsing="false" onAction="#bin" text="0,1" toggleGroup="$ALPHABET">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="N09" layoutX="400.0" layoutY="207.0" mnemonicParsing="false" onAction="#I09" text="0..9" toggleGroup="$ALPHABET">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="name" layoutX="208.0" layoutY="168.0" prefHeight="25.0" prefWidth="108.0" />
+        <TextField fx:id="transation" layoutX="346.0" layoutY="289.0" prefHeight="25.0" prefWidth="132.0" />
+        <TextField fx:id="alphabet" layoutX="462.0" layoutY="168.0" prefHeight="25.0" prefWidth="108.0" />
+        <TextField fx:id="finalState" layoutX="462.0" layoutY="239.0" prefHeight="25.0" prefWidth="108.0" />
+        <TextField fx:id="initialState" layoutX="208.0" layoutY="239.0" prefHeight="25.0" prefWidth="108.0" />
+        <Button fx:id="next" layoutX="146.0" layoutY="336.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="88.0" text="NEXT" textFill="#e80000">
+            <font>
+                <Font name="Corbel Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="submit" layoutX="377.0" layoutY="336.0" mnemonicParsing="false" onAction="#submit" prefHeight="34.0" prefWidth="101.0" text="SUBMIT" textFill="#e80000">
+            <font>
+                <Font name="Corbel Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label fx:id="labelState" layoutX="230.0" layoutY="285.0" prefHeight="34.0" prefWidth="64.0" text="">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <CheckBox fx:id="deadState" layoutX="486.0" layoutY="293.0" mnemonicParsing="false" onAction="#deadState" text="DEAD STATE ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </CheckBox>
+        <Label layoutX="21.0" layoutY="201.0" prefHeight="34.0" prefWidth="177.0" text="FINITE SET OF STATES">
+            <font>
+                <Font name="Georgia Bold" size="14.0" />
+            </font>
+        </Label>
+        <!--<TextField fx:id="finalState" layoutX="208.0" layoutY="155.0" prefHeight="25.0" prefWidth="108.0" />-->
+        <RadioButton fx:id="other" layoutX="517.0" layoutY="208.0" mnemonicParsing="false" onAction="#othre" text="Other" toggleGroup="$ALPHABET">
+          
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="finite" layoutX="208.0" layoutY="205.0" prefHeight="25.0" prefWidth="108.0" />
+      <ImageView fitHeight="109.0" fitWidth="108.0" layoutX="457.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="108.0" layoutX="240.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Project-Automata-Final-Logo-512x512.png" />
+         </image>
+      </ImageView>
+    </children>
+    <effect>
+        <GaussianBlur radius="0.0">
+            <input>
+                <InnerShadow />
+            </input>
+        </GaussianBlur>
+    </effect>
+</Pane>

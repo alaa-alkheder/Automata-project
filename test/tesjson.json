@@ -1,0 +1,1 @@
+{"initial_state":"0","final_states":["2"],"alphabet":"ab*","transaction":["1","-1","-1","-1","-1","2","2","2","2"],"states":[0,1,2]}
